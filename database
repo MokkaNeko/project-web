@@ -3,15 +3,15 @@ CREATE TABLE Admin (
   id_admin INT PRIMARY KEY,
   username VARCHAR(50),
   password VARCHAR(50),
-  status ENUM('admin', 'member')
+  status ENUM('admin')
 );
 
 -- Tabel Member
 CREATE TABLE Member (
-  id_member INT PRIMARY KEY,
-  username VARCHAR(50),
+  id_member INT,
+  username VARCHAR(50) PRIMARY KEY,
   password VARCHAR(50),
-  status ENUM('admin', 'member')
+  status ENUM('member')
 );
 
 -- Tabel Jadwal
