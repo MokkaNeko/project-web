@@ -1,5 +1,8 @@
-# project-web
+# Class System
 
-project terakhir praktikum web
+Sebuah web dimana kita dapat melihat jadwal, tugas, atau chat dengan teman sekelas
 
-bikin apa bang?
+## Authors
+
+- [@Iksanard](https://www.github.com/Iksanard)
+- [@Risyofi](https://www.github.com/Risyofi)
