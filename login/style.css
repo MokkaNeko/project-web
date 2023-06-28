@@ -58,6 +58,14 @@ body {
   background: var(--dark-yellow);
   color: #fff;
 }
+.login:focus {
+  outline: none;
+}
+
+.login:active {
+  background-color: var(--dark-yellow);
+  color: #fff;
+}
 
 .sign-up a {
   text-decoration: none;
