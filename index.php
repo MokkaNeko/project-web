@@ -33,24 +33,20 @@
       </div>
       <!-- Right Content -->
       <div class="right-content col-md-6">
-        <div class="row align-items-center">
+        <form method="post" action="index.php" class="row align-items-center">
           <div class="header-text mb-4">
             <h2 class="text-center fw-bold">Login</h2>
             <p class="text-center">Please login to your account</p>
           </div>
-          <div class="input-group mb-3">
-            <input type="text" class="username form-control" placeholder="Username" aria-label="Username"
+          <div class="input-group row mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="username form-control" placeholder="Enter username" aria-label="Username"
               aria-describedby="basic-addon1" />
           </div>
-          <div class="input-group mb-3">
-            <input type="password" class="password form-control" placeholder="Password" aria-label="Password"
+          <div class="input-group row mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="password form-control" placeholder="Enter password" aria-label="Password"
               aria-describedby="basic-addon1" />
-          </div>
-          <div class="input-group mb-5 d-flex justify-content-between">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="formCheck">
-              <label for="formCheck" class="form-check-label">Remember me</label>
-            </div>
           </div>
           <div class="input-group mb-3">
             <button class="login btn btn-lg w-100 fs-6">Login</button>
@@ -58,7 +54,7 @@
           <div class="sign-up row">
             <small>Don't have account? <a href="register.php">Sign up</a></small>
           </div>
-        </div>
+        </form>
       </div>
     </div>
 </body>
