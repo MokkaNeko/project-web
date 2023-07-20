@@ -7,6 +7,8 @@ Sebuah web dimana kita dapat melihat jadwal, tugas, atau chat dengan teman sekel
 - [@Iksanard](https://www.github.com/Iksanard)
 - [@Risyofi](https://www.github.com/Risyofi)
 
+<h1>Kurang bagian gabung file e Alfian(jadwal piket, jadwal pelajaran)</h1>
+
 ## Task
 
 :white_check_mark: login
