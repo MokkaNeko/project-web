@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :root {
   --green: #57a44d;
   --light-green: #78bc71;
@@ -119,8 +118,7 @@ body {
     padding: 40px 20px 40px 20px;
   }
 }
-=======
-:root {
+======= :root {
   --green: #57a44d;
   --light-green: #78bc71;
   --grey: #ede6d6;
@@ -240,4 +238,3 @@ body {
     padding: 40px 20px 40px 20px;
   }
 }
->>>>>>> f81c3210d9b0d64a41415c9d9e157b03f15f42d1
