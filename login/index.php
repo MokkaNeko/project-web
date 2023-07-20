@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,23 +41,61 @@
             <h2 class="text-center fw-bold">Login</h2>
             <p class="text-center">Please login to your account</p>
           </div>
+          <!-- Username -->
           <div class="input-group row mb-3">
             <label for="username" class="form-label">Username</label>
-            <input type="text" class="username form-control" placeholder="Enter username" aria-label="Username"
-              aria-describedby="basic-addon1" />
+            <input type="text" class="username form-control" id="username" name="username" placeholder="Enter username"
+              aria-label="Username" aria-describedby="basic-addon1" />
           </div>
+          <!-- Password -->
           <div class="input-group row mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="password form-control" placeholder="Enter password" aria-label="Password"
-              aria-describedby="basic-addon1" />
+            <input type="password" class="password form-control" id="password" name="password"
+              placeholder="Enter password" aria-label="Password" aria-describedby="basic-addon1" />
           </div>
+          <!-- Error message -->
+          <div class="error-message mb-2">
+            <small id="errmsg"></small>
+          </div>
+          <!-- Login button -->
           <div class="input-group mb-3">
-            <button class="login btn btn-lg w-100 fs-6">Login</button>
+            <button class="login btn btn-lg w-100 fs-6" name="login" onClick="check(event)">Login</button>
           </div>
           <div class="sign-up row">
             <small>Don't have account? <a href="register.php">Sign up</a></small>
           </div>
         </form>
+        <script>
+        function check(event) {
+          var username = document.querySelector('#username').value;
+          var password = document.querySelector('#password').value;
+
+          if (username == "" || password == "") {
+            document.querySelector('#errmsg').textContent = "Please fill in all fields!";
+            event.preventDefault();
+          } else {
+            document.querySelector('.login').submit();
+          }
+        }
+        </script>
+        <?php
+          include('php/config.php');
+          if(isset($_POST['login'])){
+            $username = mysqli_real_escape_string($con, $_POST['username']);
+            $password = mysqli_real_escape_string($con, $_POST['password']);
+            $query = "SELECT * FROM member WHERE username='$username' AND password='$password'";
+            $result = mysqli_query($con, $query) or die(mysqli_error($con));
+            $row = mysqli_fetch_assoc($result);
+            if(is_array($row) && !empty($row)){
+              $_SESSION['username'] = $row['username'];
+            }else{
+              echo "<script>document.querySelector('#errmsg').textContent = 'Username or Password is incorrect!';</script>";
+            }
+          }
+          if(isset($_SESSION['username'])){
+            header("location: home.html");
+          }
+        ?>
       </div>
     </div>
 </body>
