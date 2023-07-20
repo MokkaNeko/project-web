@@ -69,7 +69,7 @@
             <button class="login btn btn-lg w-100 fs-6" name="signup" onClick="check(event)">Sign up</button>
           </div>
           <div class="sign-up row">
-            <small>Already registered? <a href="/index.php">Login</a></small>
+            <small>Already registered? <a href="index.php">Login</a></small>
           </div>
         </form>
         <script>
